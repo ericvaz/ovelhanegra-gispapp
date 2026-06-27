@@ -27,6 +27,6 @@ how `ovelhanegra.io` is hosted:
 
 Then verify both links load before submitting the app.
 
-## Before you publish — edit these
-- **Contact email:** currently `support@ovelhanegra.io` in `index.html` and `privacy.html`.
-  Set up that address (or swap it for one you already use). Search-replace to change it.
+## Contact email
+- Support/contact email is **hello.ovelhanegra@gmail.com** (in `index.html` and `privacy.html`).
+  To change it later, search-replace that address across both files.
