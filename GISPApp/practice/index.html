@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GISP Practice Questions Online — 400 Free Questions, Mock Exams | GISP Prep</title>
+<meta name="description" content="Practice for the GIS Professional (GISP) exam in your browser: 400 questions with explanations across all ten GISCI knowledge categories, free. Timed mock exams and analytics with a one-time unlock." />
+<link rel="canonical" href="https://ovelhanegra.io/GISPApp/practice/" />
+<meta name="apple-itunes-app" content="app-id=6785084756" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="GISP Practice Questions Online — GISP Prep" />
+<meta property="og:description" content="400 GISP exam questions with explanations, free in your browser. Ten GISCI categories, timed mocks, analytics." />
+<meta property="og:url" content="https://ovelhanegra.io/GISPApp/practice/" />
+<meta property="og:image" content="https://ovelhanegra.io/GISPApp/img/og.png" />
+<link rel="icon" href="../img/icon.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "GISP Prep — Practice Online",
+  "url": "https://ovelhanegra.io/GISPApp/practice/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any (web browser)",
+  "description": "Browser-based practice for the GIS Professional (GISP) certification exam: 400 questions with explanations across the ten GISCI knowledge categories, timed mock exams and analytics.",
+  "offers": [
+    { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "All 400 practice questions, free" },
+    { "@type": "Offer", "price": "14.99", "priceCurrency": "USD", "description": "GISP Prep Pro (web) — one-time unlock: mock exams, analytics, full flashcards" }
+  ],
+  "publisher": { "@type": "Organization", "name": "Ovelha Negra", "url": "https://ovelhanegra.io/" }
+}
+</script>
+<style>
+  :root{--blue:#1560c8;--blue2:#0ea5a4;--ink:#111827;--sub:#5b6472;--line:#e8ebf1;--bg:#fff;--soft:#f4f8fd;--good:#10b981;--bad:#ef4444;--warn:#f59e0b;--radius:16px;--wrap:880px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--soft);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--blue);text-decoration:none}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 18px}
+  nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .row{display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--ink)}
+  .brand img{width:30px;height:30px;border-radius:8px}
+  .tabs{display:flex;gap:4px;overflow-x:auto}
+  .tab{padding:8px 12px;border-radius:10px;font-weight:600;color:var(--sub);white-space:nowrap;background:none;border:0;cursor:pointer;font:inherit;font-weight:600}
+  .tab.on{background:#e9f2ff;color:var(--blue)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border-radius:12px;padding:11px 18px;border:0;cursor:pointer;font:inherit;font-weight:700}
+  .btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{opacity:.92}
+  .btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+  .btn-pro{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff}
+  .btn[disabled]{opacity:.5;cursor:default}
+  main{padding:22px 0 60px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin:14px 0}
+  h1{font-size:1.7rem;letter-spacing:-.02em;line-height:1.2}
+  h2{font-size:1.2rem;margin-bottom:8px}
+  h3{font-size:1.02rem}
+  .sub{color:var(--sub)}
+  .muted{color:var(--sub);font-size:.9rem}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .row3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  @media(max-width:640px){.row2,.row3{grid-template-columns:1fr}}
+  .stat{background:var(--soft);border-radius:12px;padding:12px 14px}
+  .stat b{font-size:1.4rem;display:block}
+  .dom{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--line);cursor:pointer}
+  .dom:first-child{border-top:0}
+  .dom .n{width:28px;height:28px;border-radius:8px;background:#e9f2ff;color:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;flex:0 0 auto}
+  .dom .t{flex:1}
+  .dom .t small{display:block;color:var(--sub)}
+  .bar{height:6px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:6px}
+  .bar i{display:block;height:100%;background:var(--blue);border-radius:99px}
+  .lock{font-size:.72rem;font-weight:800;color:var(--blue);background:#e9f2ff;border-radius:6px;padding:2px 6px;letter-spacing:.04em}
+  .pill{font-size:.78rem;font-weight:700;color:var(--sub);background:var(--soft);border-radius:999px;padding:4px 10px}
+  .opt{display:block;width:100%;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;margin:8px 0;font:inherit;cursor:pointer;line-height:1.45}
+  .opt:hover{border-color:var(--blue)}
+  .opt.sel{border-color:var(--blue);background:#eef4ff}
+  .opt.ok{border-color:var(--good);background:#ecfdf5}
+  .opt.no{border-color:var(--bad);background:#fef2f2}
+  .opt[disabled]{cursor:default;color:var(--ink);opacity:1}
+  .opt b{display:inline-block;width:22px;color:var(--sub)}
+  .expl{background:var(--soft);border-left:3px solid var(--blue2);border-radius:8px;padding:10px 12px;margin-top:10px;font-size:.95rem}
+  .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .timer{font-variant-numeric:tabular-nums;font-weight:800;color:var(--ink)}
+  .timer.low{color:var(--bad)}
+  .fc{min-height:180px;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;cursor:pointer;font-size:1.05rem}
+  .fc.back{background:#eef4ff}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  .res{display:flex;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
+  .res:first-child{border-top:0}
+  .res .t{flex:1}
+  .hero{background:linear-gradient(160deg,#eaf3ff 0%,#f3fbfa 60%,#fff 100%);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:12px;font-size:.92rem;z-index:50;display:none;max-width:90vw}
+  footer{text-align:center;color:var(--sub);font-size:.85rem;padding:30px 18px 50px}
+  footer a{margin:0 8px}
+  .sr{position:absolute;left:-9999px}
+  input[type=email]{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;width:100%;max-width:360px}
+  table{width:100%;border-collapse:collapse;font-size:.93rem}
+  td,th{padding:8px 6px;border-top:1px solid var(--line);text-align:left}
+  th{color:var(--sub);font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;border-top:0}
+</style>
+</head>
+<body>
+<nav><div class="wrap row">
+  <a class="brand" href="../"><img src="../img/icon.png" alt="" onerror="this.style.display='none'">GISP Prep</a>
+  <div class="tabs" role="tablist">
+    <button class="tab on" data-tab="home">Home</button>
+    <button class="tab" data-tab="practice">Practice</button>
+    <button class="tab" data-tab="mock">Mock Exams</button>
+    <button class="tab" data-tab="flash">Flashcards</button>
+    <button class="tab" data-tab="stats">Analytics</button>
+  </div>
+  <button class="btn btn-pro" id="navPro" style="padding:8px 12px;font-size:.85rem">Unlock Pro</button>
+</div></nav>
+
+<main class="wrap">
+  <!-- HOME -->
+  <section id="v-home">
+    <div class="hero">
+      <h1>GISP practice questions, in your browser</h1>
+      <p class="sub" style="margin:8px 0 14px;max-width:60ch">400 questions with explanations across all ten GISCI knowledge categories. Practice is free, no account. Mock exams, analytics and the full flashcard library are a one-time unlock.</p>
+      <div class="actions">
+        <button class="btn btn-primary" id="quick">Quick practice (10 questions)</button>
+        <a class="btn btn-ghost" href="https://apps.apple.com/us/app/gisp-prep-gis-exam-practice/id6785084756">Get the iPhone app</a>
+        <a class="btn btn-ghost" href="../gisp-exam-study-guide/">Free study guide</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="row3">
+        <div class="stat"><b id="sAcc">0%</b><span class="muted">overall accuracy</span></div>
+        <div class="stat"><b id="sAns">0</b><span class="muted">of <span id="sTot">400</span> answered</span></div>
+        <div class="stat"><b id="sMock">0</b><span class="muted">mock exams taken</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="top"><h2>Practice by category</h2><span class="muted">40 questions each</span></div>
+      <div id="homeDomains"></div>
+    </div>
+    <div class="card" id="proCard">
+      <h2>GISP Prep Pro (web)</h2>
+      <p class="sub">Timed full-length and topic-wise mock exams, performance analytics, weak-area detection, and all 120 flashcards. One-time <b>$14.99</b>, no subscription, works on any device with this browser unlock. Already bought on iPhone? The iOS unlock is separate (App Store rules); the web unlock is its own purchase.</p>
+      <div class="actions">
+        <button class="btn btn-pro" id="buy">Unlock Pro — $14.99 one-time</button>
+        <button class="btn btn-ghost" id="restore">Restore purchase</button>
+      </div>
+      <p class="muted" style="margin-top:8px">Secure checkout by Stripe. Your unlock is saved in this browser; use Restore with the same email on another device.</p>
+    </div>
+  </section>
+
+  <!-- PRACTICE -->
+  <section id="v-practice" hidden>
+    <div class="card">
+      <h2>Practice by category</h2>
+      <p class="muted">Immediate feedback and an explanation after every answer. All free.</p>
+      <div id="practiceDomains"></div>
+    </div>
+    <div class="card">
+      <h2>Modes</h2>
+      <div class="actions">
+        <button class="btn btn-primary" data-mode="quick">Quick (10, mixed)</button>
+        <button class="btn btn-ghost" data-mode="mixed">Mixed (25)</button>
+        <button class="btn btn-ghost" data-mode="weak">Weak areas (15) <span class="lock">PRO</span></button>
+        <button class="btn btn-ghost" data-mode="timed">Timed (25, 30 min) <span class="lock">PRO</span></button>
+        <button class="btn btn-ghost" data-mode="hard">Challenge (20 hard) <span class="lock">PRO</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOCK -->
+  <section id="v-mock" hidden>
+    <div class="card">
+      <h2>Mock exams</h2>
+      <p class="muted">Exam conditions: no feedback until the end, real timer, results by category. <span class="lock">PRO</span></p>
+      <div class="actions">
+        <button class="btn btn-primary" data-mock="full">Full-length: 50 questions, 60 min</button>
+        <button class="btn btn-ghost" data-mock="long">Extended: 75 questions, 90 min</button>
+        <button class="btn btn-ghost" data-mock="short">Short: 25 questions, 30 min</button>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Topic-wise mocks (20 questions, 25 min)</h3>
+      <div id="mockDomains"></div>
+    </div>
+    <div class="card">
+      <h3>Recent results</h3>
+      <div id="mockHistory" class="muted">No mock exams yet.</div>
+    </div>
+  </section>
+
+  <!-- FLASH -->
+  <section id="v-flash" hidden>
+    <div class="card">
+      <h2>Flashcards</h2>
+      <p class="muted">Conceptual Foundations is free. The other nine categories are part of Pro.</p>
+      <div id="flashDomains"></div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="v-stats" hidden>
+    <div class="card" id="statsBody"></div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="v-quiz" hidden>
+    <div class="card">
+      <div class="top">
+        <div><span class="pill" id="qTitle"></span> <span class="muted" id="qPos"></span></div>
+        <div><span class="timer" id="qTimer"></span> <button class="btn btn-ghost" id="qQuit" style="padding:6px 10px;font-size:.85rem">Quit</button></div>
+      </div>
+      <div class="muted" id="qMeta"></div>
+      <h2 id="qText" style="margin:10px 0 6px;font-size:1.1rem;line-height:1.4"></h2>
+      <div id="qOpts"></div>
+      <div id="qExpl" class="expl" hidden></div>
+      <div class="actions"><button class="btn btn-primary" id="qNext" disabled>Next</button></div>
+    </div>
+  </section>
+
+  <!-- RESULT -->
+  <section id="v-result" hidden>
+    <div class="card" id="resultBody"></div>
+  </section>
+
+  <!-- FLASHCARD DECK -->
+  <section id="v-deck" hidden>
+    <div class="card">
+      <div class="top"><span class="pill" id="dTitle"></span><span class="muted" id="dPos"></span></div>
+      <div class="card fc" id="dCard"></div>
+      <div class="actions">
+        <button class="btn btn-ghost" id="dPrev">Previous</button>
+        <button class="btn btn-primary" id="dFlip">Flip</button>
+        <button class="btn btn-ghost" id="dNext">Next</button>
+        <button class="btn btn-ghost" id="dDone">Done</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a href="../">GISP Prep</a> · <a href="../gisp-exam-study-guide/">Study guide</a> · <a href="../questions/">Sample questions by category</a> · <a href="../privacy.html">Privacy</a> · <a href="https://ovelhanegra.io/">Ovelha Negra</a>
+  <p style="margin-top:10px">Independent study aid, not affiliated with or endorsed by the GIS Certification Institute (GISCI). Progress is stored in this browser only.</p>
+</footer>
+<div class="toast" id="toast"></div>
+
+<script>
+(() => {
+  const API = "https://geo-data.io/api";
+  const DOMAINS = ["Conceptual Foundations","Geospatial Data Fundamentals","Cartography & Visualization","Data Acquisitions","Data Manipulation","Analytical Methods","Database Design & Management","Application Development","Systems Design & Management","Professional Practice"];
+  const FREE_FLASH = DOMAINS[0];
+  const $ = (s) => document.querySelector(s);
+  const $$ = (s) => Array.from(document.querySelectorAll(s));
+  const esc = (s) => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const shuffle = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+
+  // ---------- state ----------
+  const LS = { attempts: "gisp.attempts", mocks: "gisp.mocks", pro: "gisp.pro", email: "gisp.email" };
+  const load = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } };
+  const save = (k, v) => localStorage.setItem(k, JSON.stringify(v));
+  let attempts = load(LS.attempts, {});   // qid -> {c: correct(bool), t: ts, d: domain}
+  let mocks = load(LS.mocks, []);         // [{title,total,correct,date,secs}]
+  let pro = !!load(LS.pro, null);
+  let Q = [], F = [];
+
+  const isPro = () => pro;
+  const toast = (m) => { const t = $("#toast"); t.textContent = m; t.style.display = "block"; clearTimeout(t._h); t._h = setTimeout(() => t.style.display = "none", 3200); };
+
+  // ---------- views ----------
+  const VIEWS = ["home","practice","mock","flash","stats","quiz","result","deck"];
+  function show(v) {
+    VIEWS.forEach(x => $("#v-" + x).hidden = x !== v);
+    $$(".tab").forEach(t => t.classList.toggle("on", t.dataset.tab === v));
+    window.scrollTo({ top: 0 });
+    if (v === "home") renderHome();
+    if (v === "practice") renderPractice();
+    if (v === "mock") renderMock();
+    if (v === "flash") renderFlash();
+    if (v === "stats") renderStats();
+  }
+  $$(".tab").forEach(t => t.addEventListener("click", () => {
+    const v = t.dataset.tab;
+    if ((v === "mock" || v === "stats") && !isPro()) { paywall(v === "mock" ? "Mock exams are part of Pro." : "Analytics are part of Pro."); return; }
+    show(v);
+  }));
+
+  // ---------- stats helpers ----------
+  const byDomain = (d) => Q.filter(q => q.domain === d);
+  const answeredIn = (d) => Object.values(attempts).filter(a => a.d === d).length;
+  const accIn = (d) => { const a = Object.values(attempts).filter(a => a.d === d); return a.length ? a.filter(x => x.c).length / a.length : null; };
+  const overall = () => { const a = Object.values(attempts); return { n: a.length, acc: a.length ? a.filter(x => x.c).length / a.length : 0 }; };
+  const weakDomains = () => DOMAINS.filter(d => { const a = accIn(d); return a !== null && a < 0.75; }).sort((x, y) => accIn(x) - accIn(y));
+
+  function domainRows(container, onClick, lockFn) {
+    container.innerHTML = DOMAINS.map((d, i) => {
+      const n = answeredIn(d), tot = byDomain(d).length, acc = accIn(d);
+      const locked = lockFn ? lockFn(d) : false;
+      return `<div class="dom" data-d="${esc(d)}"><div class="n">${i + 1}</div><div class="t">${esc(d)} ${locked ? '<span class="lock">PRO</span>' : ''}<small>${n}/${tot} answered${acc !== null ? ` · ${Math.round(acc * 100)}% accuracy` : ''}</small><div class="bar"><i style="width:${tot ? Math.round(100 * n / tot) : 0}%"></i></div></div><div class="muted">›</div></div>`;
+    }).join("");
+    container.querySelectorAll(".dom").forEach(el => el.addEventListener("click", () => onClick(el.dataset.d)));
+  }
+
+  function renderHome() {
+    const o = overall();
+    $("#sAcc").textContent = Math.round(o.acc * 100) + "%";
+    $("#sAns").textContent = o.n; $("#sTot").textContent = Q.length; $("#sMock").textContent = mocks.length;
+    domainRows($("#homeDomains"), (d) => startQuiz({ title: d, qs: pick(byDomain(d), 12), exam: false }));
+    $("#proCard").style.display = isPro() ? "none" : "";
+    $("#navPro").textContent = isPro() ? "Pro" : "Unlock Pro";
+    $("#navPro").disabled = isPro();
+  }
+  function renderPractice() { domainRows($("#practiceDomains"), (d) => startQuiz({ title: d, qs: pick(byDomain(d), 12), exam: false })); }
+  function renderMock() {
+    domainRows($("#mockDomains"), (d) => startQuiz({ title: d + " mock", qs: pick(byDomain(d), 20), exam: true, secs: 25 * 60 }));
+    $("#mockHistory").innerHTML = mocks.length ? mocks.slice(-8).reverse().map(m => `<div class="res"><div class="t"><b>${esc(m.title)}</b><br><span class="muted">${new Date(m.date).toLocaleDateString()} · ${m.total} questions · ${Math.floor(m.secs / 60)} min</span></div><b>${Math.round(100 * m.correct / m.total)}%</b></div>`).join("") : "No mock exams yet.";
+  }
+  function renderFlash() {
+    domainRows($("#flashDomains"), (d) => { if (!isPro() && d !== FREE_FLASH) { paywall("The full flashcard library is part of Pro."); return; } startDeck(d); }, (d) => !isPro() && d !== FREE_FLASH);
+  }
+  function renderStats() {
+    const o = overall();
+    const rows = DOMAINS.map(d => { const a = accIn(d); return `<tr><td>${esc(d)}</td><td>${answeredIn(d)}/${byDomain(d).length}</td><td>${a === null ? "—" : Math.round(a * 100) + "%"}</td><td><div class="bar" style="margin:0"><i style="width:${a === null ? 0 : Math.round(a * 100)}%;background:${a === null ? "#ccc" : a < .6 ? "var(--bad)" : a < .75 ? "var(--warn)" : "var(--good)"}"></i></div></td></tr>`; }).join("");
+    const diff = ["Easy","Medium","Hard"].map(lv => { const ids = new Set(Q.filter(q => q.difficulty === lv).map(q => q.id)); const a = Object.entries(attempts).filter(([id]) => ids.has(id)); const acc = a.length ? a.filter(([, x]) => x.c).length / a.length : null; return `<div class="stat"><b>${acc === null ? "—" : Math.round(acc * 100) + "%"}</b><span class="muted">${lv} (${a.length} answered)</span></div>`; }).join("");
+    const weak = weakDomains();
+    $("#statsBody").innerHTML = `<h2>Analytics</h2>
+      <div class="row3" style="margin:10px 0 16px"><div class="stat"><b>${Math.round(o.acc * 100)}%</b><span class="muted">overall accuracy</span></div><div class="stat"><b>${o.n}</b><span class="muted">questions answered</span></div><div class="stat"><b>${mocks.length ? Math.round(mocks.reduce((s, m) => s + m.correct / m.total, 0) / mocks.length * 100) + "%" : "—"}</b><span class="muted">average mock score</span></div></div>
+      <h3>Accuracy by category</h3><table><thead><tr><th>Category</th><th>Answered</th><th>Accuracy</th><th></th></tr></thead><tbody>${rows}</tbody></table>
+      <h3 style="margin-top:18px">By difficulty</h3><div class="row3" style="margin-top:8px">${diff}</div>
+      <h3 style="margin-top:18px">Weak areas</h3><p class="sub">${weak.length ? "Below 75%: " + weak.map(esc).join(", ") + "." : "No category is below 75% yet. Keep going."}</p>
+      <div class="actions"><button class="btn btn-primary" id="weakBtn" ${weak.length ? "" : "disabled"}>Practice weak areas (15)</button><button class="btn btn-ghost" id="resetBtn">Reset progress</button></div>`;
+    $("#weakBtn")?.addEventListener("click", () => startQuiz({ title: "Weak areas", qs: pick(Q.filter(q => weak.includes(q.domain)), 15), exam: false }));
+    $("#resetBtn")?.addEventListener("click", () => { if (confirm("Clear all answers, mock results and analytics in this browser?")) { attempts = {}; mocks = []; save(LS.attempts, attempts); save(LS.mocks, mocks); renderStats(); toast("Progress cleared."); } });
+  }
+
+  // ---------- quiz engine ----------
+  const pick = (pool, n) => shuffle(pool).slice(0, n);
+  let S = null, timerH = null;
+  function startQuiz({ title, qs, exam, secs }) {
+    if (!qs.length) { toast("No questions available."); return; }
+    S = { title, qs, exam: !!exam, i: 0, sel: {}, secs: secs || null, left: secs || 0, started: Date.now() };
+    clearInterval(timerH);
+    if (S.secs) timerH = setInterval(tick, 1000);
+    show("quiz"); renderQ();
+  }
+  function tick() { S.left--; const t = $("#qTimer"); t.textContent = fmt(S.left); t.classList.toggle("low", S.left < 60); if (S.left <= 0) { clearInterval(timerH); finish(); } }
+  const fmt = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+  function renderQ() {
+    const q = S.qs[S.i];
+    $("#qTitle").textContent = S.title; $("#qPos").textContent = `Question ${S.i + 1} of ${S.qs.length}`;
+    $("#qTimer").textContent = S.secs ? fmt(S.left) : "";
+    $("#qMeta").textContent = `${q.domain} · ${q.difficulty} · ${q.type}`;
+    $("#qText").textContent = q.question;
+    $("#qExpl").hidden = true; $("#qNext").disabled = true;
+    $("#qNext").textContent = S.i === S.qs.length - 1 ? (S.exam ? "Finish exam" : "See results") : "Next";
+    $("#qOpts").innerHTML = q.options.map((o, k) => `<button class="opt" data-k="${k}"><b>${"ABCD"[k]}</b>${esc(o)}</button>`).join("");
+    $$("#qOpts .opt").forEach(b => b.addEventListener("click", () => choose(+b.dataset.k)));
+  }
+  function choose(k) {
+    const q = S.qs[S.i]; S.sel[q.id] = k;
+    const btns = $$("#qOpts .opt");
+    if (S.exam) { btns.forEach(b => b.classList.toggle("sel", +b.dataset.k === k)); }
+    else {
+      btns.forEach(b => { b.disabled = true; const kk = +b.dataset.k; if (kk === q.correctIndex) b.classList.add("ok"); else if (kk === k) b.classList.add("no"); });
+      $("#qExpl").innerHTML = `<b>${k === q.correctIndex ? "Correct." : "Not quite."}</b> ${esc(q.explanation)}`; $("#qExpl").hidden = false;
+      record(q, k);
+    }
+    $("#qNext").disabled = false;
+  }
+  function record(q, k) { attempts[q.id] = { c: k === q.correctIndex, t: Date.now(), d: q.domain }; save(LS.attempts, attempts); }
+  $("#qNext").addEventListener("click", () => { if (S.i < S.qs.length - 1) { S.i++; renderQ(); } else finish(); });
+  $("#qQuit").addEventListener("click", () => { if (confirm("Quit this session? Answers so far are kept.")) { clearInterval(timerH); if (S.exam) finish(true); else show("home"); } });
+  function finish(quit) {
+    clearInterval(timerH);
+    if (S.exam) { S.qs.forEach(q => { if (q.id in S.sel) record(q, S.sel[q.id]); }); }
+    const correct = S.qs.filter(q => S.sel[q.id] === q.correctIndex).length;
+    const secs = Math.round((Date.now() - S.started) / 1000);
+    if (S.exam && !quit) { mocks.push({ title: S.title, total: S.qs.length, correct, date: Date.now(), secs }); save(LS.mocks, mocks); }
+    const byD = {}; S.qs.forEach(q => { byD[q.domain] = byD[q.domain] || { n: 0, c: 0 }; byD[q.domain].n++; if (S.sel[q.id] === q.correctIndex) byD[q.domain].c++; });
+    const pct = Math.round(100 * correct / S.qs.length);
+    $("#resultBody").innerHTML = `<h2>${esc(S.title)} — ${pct}%</h2><p class="sub">${correct} of ${S.qs.length} correct · ${fmt(secs)}${S.exam ? (pct >= 70 ? " · Passing range" : " · Below the usual passing range") : ""}</p>
+      <h3 style="margin-top:14px">By category</h3>${Object.entries(byD).map(([d, v]) => `<div class="res"><div class="t">${esc(d)}</div><b>${v.c}/${v.n}</b></div>`).join("")}
+      ${S.exam ? `<h3 style="margin-top:14px">Review</h3>${S.qs.map((q, i) => `<div class="res"><div class="t"><span class="muted">${i + 1}.</span> ${esc(q.question)}<br><span class="muted">Your answer: ${q.id in S.sel ? "ABCD"[S.sel[q.id]] : "—"} · Correct: ${"ABCD"[q.correctIndex]}</span><div class="expl" style="margin-top:6px">${esc(q.explanation)}</div></div><b style="color:${S.sel[q.id] === q.correctIndex ? "var(--good)" : "var(--bad)"}">${S.sel[q.id] === q.correctIndex ? "✓" : "✗"}</b></div>`).join("")}` : ""}
+      <div class="actions"><button class="btn btn-primary" id="again">Again</button><button class="btn btn-ghost" id="homeBtn">Home</button></div>`;
+    $("#again").addEventListener("click", () => startQuiz({ title: S.title, qs: pick(S.qs.length >= 40 ? Q : Q.filter(q => S.qs.some(x => x.domain === q.domain)), S.qs.length), exam: S.exam, secs: S.secs }));
+    $("#homeBtn").addEventListener("click", () => show("home"));
+    show("result");
+  }
+
+  // ---------- modes ----------
+  $("#quick").addEventListener("click", () => startQuiz({ title: "Quick practice", qs: pick(Q, 10), exam: false }));
+  $$("[data-mode]").forEach(b => b.addEventListener("click", () => {
+    const m = b.dataset.mode;
+    if (m === "quick") return startQuiz({ title: "Quick practice", qs: pick(Q, 10), exam: false });
+    if (m === "mixed") return startQuiz({ title: "Mixed practice", qs: pick(Q, 25), exam: false });
+    if (!isPro()) return paywall("Timed, Challenge and Weak-area practice are part of Pro.");
+    if (m === "weak") { const w = weakDomains(); return w.length ? startQuiz({ title: "Weak areas", qs: pick(Q.filter(q => w.includes(q.domain)), 15), exam: false }) : toast("Answer some questions first so we can find weak areas."); }
+    if (m === "timed") return startQuiz({ title: "Timed practice", qs: pick(Q, 25), exam: true, secs: 30 * 60 });
+    if (m === "hard") return startQuiz({ title: "Challenge", qs: pick(Q.filter(q => q.difficulty === "Hard"), 20), exam: false });
+  }));
+  $$("[data-mock]").forEach(b => b.addEventListener("click", () => {
+    if (!isPro()) return paywall("Mock exams are part of Pro.");
+    const m = b.dataset.mock;
+    const cfg = m === "long" ? [75, 90] : m === "short" ? [25, 30] : [50, 60];
+    startQuiz({ title: "GISP mock exam", qs: pick(Q, cfg[0]), exam: true, secs: cfg[1] * 60 });
+  }));
+
+  // ---------- flashcards ----------
+  let D = null;
+  function startDeck(d) { D = { d, cards: shuffle(F.filter(c => c.domain === d)), i: 0, back: false }; if (!D.cards.length) return toast("No cards yet."); show("deck"); renderDeck(); }
+  function renderDeck() { const c = D.cards[D.i]; $("#dTitle").textContent = D.d; $("#dPos").textContent = `${D.i + 1} / ${D.cards.length}`; const el = $("#dCard"); el.classList.toggle("back", D.back); el.textContent = D.back ? c.back : c.front; }
+  $("#dCard").addEventListener("click", () => { D.back = !D.back; renderDeck(); });
+  $("#dFlip").addEventListener("click", () => { D.back = !D.back; renderDeck(); });
+  $("#dNext").addEventListener("click", () => { D.i = (D.i + 1) % D.cards.length; D.back = false; renderDeck(); });
+  $("#dPrev").addEventListener("click", () => { D.i = (D.i - 1 + D.cards.length) % D.cards.length; D.back = false; renderDeck(); });
+  $("#dDone").addEventListener("click", () => show("flash"));
+
+  // ---------- Pro / Stripe ----------
+  function paywall(msg) { toast(msg + " Scroll down on Home to unlock."); show("home"); setTimeout(() => $("#proCard").scrollIntoView({ behavior: "smooth", block: "center" }), 50); }
+  async function buy() {
+    const email = (load(LS.email, "") || prompt("Email for your receipt (also used to restore on other devices):", "") || "").trim();
+    if (email) save(LS.email, email);
+    $("#buy").disabled = true; $("#buy").textContent = "Opening secure checkout…";
+    try {
+      const r = await fetch(API + "/gisp-checkout", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email }) });
+      const j = await r.json();
+      if (j.url) { location.href = j.url; return; }
+      throw new Error(j.error || "no url");
+    } catch (e) { toast("Checkout is not available right now. Please try again later."); $("#buy").disabled = false; $("#buy").textContent = "Unlock Pro — $14.99 one-time"; }
+  }
+  async function verify(params) {
+    try { const r = await fetch(API + "/gisp-verify?" + new URLSearchParams(params)); const j = await r.json(); if (j.paid && j.token) { save(LS.pro, { token: j.token, email: j.email || null, at: Date.now() }); pro = true; if (j.email) save(LS.email, j.email); return true; } } catch {}
+    return false;
+  }
+  async function restore() {
+    const email = (prompt("Enter the email you used at checkout:", load(LS.email, "") || "") || "").trim();
+    if (!email) return;
+    toast("Checking…");
+    if (await verify({ email })) { toast("Pro restored on this device."); renderHome(); } else toast("No purchase found for that email.");
+  }
+  $("#buy").addEventListener("click", buy);
+  $("#navPro").addEventListener("click", () => paywall("Unlock mock exams, analytics and the full flashcard library."));
+  $("#restore").addEventListener("click", restore);
+
+  // ---------- boot ----------
+  async function boot() {
+    const [q, f] = await Promise.all([fetch("data/questions.json").then(r => r.json()), fetch("data/flashcards.json").then(r => r.json())]);
+    Q = q; F = f;
+    const u = new URL(location.href);
+    if (u.searchParams.get("session_id")) {
+      const ok = await verify({ session_id: u.searchParams.get("session_id") });
+      history.replaceState(null, "", u.pathname);
+      toast(ok ? "Thank you. GISP Prep Pro is unlocked in this browser." : "Payment could not be verified yet. Use Restore purchase in a minute.");
+    } else if (u.searchParams.get("canceled")) { history.replaceState(null, "", u.pathname); }
+    show("home");
+  }
+  boot();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,842 @@
+[
+  {
+    "id": "FC-CF-001",
+    "domain": "Conceptual Foundations",
+    "difficulty": "Easy",
+    "front": "State Tobler's First Law of Geography and the concept it underpins.",
+    "back": "Everything is related to everything else, but near things are more related than distant things. It underpins spatial dependence and spatial autocorrelation, and justifies interpolation and neighbourhood-based analysis."
+  },
+  {
+    "id": "FC-CF-002",
+    "domain": "Conceptual Foundations",
+    "difficulty": "Medium",
+    "front": "What is the Modifiable Areal Unit Problem and what are its two effects?",
+    "back": "Results of analysis on aggregated areal data depend on the zoning system used. Scale (aggregation) effect: results change with the number or size of units. Zoning effect: results change with how boundaries are drawn at a fixed scale."
+  },
+  {
+    "id": "FC-CF-003",
+    "domain": "Conceptual Foundations",
+    "difficulty": "Medium",
+    "front": "Define the ecological fallacy.",
+    "back": "Drawing conclusions about individuals from relationships observed among aggregate units (for example tracts or counties). A correlation at the area level need not hold at the individual level."
+  },
+  {
+    "id": "FC-CF-004",
+    "domain": "Conceptual Foundations",
+    "difficulty": "Easy",
+    "front": "List the four levels of measurement with a GIS example of each.",
+    "back": "Nominal: land-use class. Ordinal: hazard rating low/medium/high. Interval: temperature in Celsius (arbitrary zero). Ratio: population density or rainfall in mm (true zero, ratios meaningful). Each level constrains which statistics and map types are valid."
+  },
+  {
+    "id": "FC-CF-005",
+    "domain": "Conceptual Foundations",
+    "difficulty": "Medium",
+    "front": "Geoid versus ellipsoid: what is each and why do both matter?",
+    "back": "Ellipsoid: smooth mathematical oblate spheroid used as the reference for latitude, longitude, and ellipsoidal height. Geoid: irregular equipotential surface of gravity approximating mean sea level, the reference for orthometric (sea-level) elevations. GNSS heights are ellipsoidal and need a geoid model to become elevations."
+  },
+  {
+    "id": "FC-CF-006",
+    "domain": "Conceptual Foundations",
+    "difficulty": "Medium",
+    "front": "What is a geodetic datum?",
+    "back": "A reference ellipsoid plus its position and orientation relative to the Earth (origin, axes, scale). Coordinates are meaningless without a datum, and the same point has different coordinates in different datums, often by tens to hundreds of metres."
+  },
+  {
+    "id": "FC-CF-007",
+    "domain": "Conceptual Foundations",
+    "difficulty": "Easy",
+    "front": "Contrast the field and object conceptual models.",
+    "back": "Field: the variable has a value at every location (elevation, temperature); usually represented by rasters, TINs, or contours. Object: space is empty except for discrete entities with identity, boundaries, and attributes (parcels, wells, roads); usually represented by vector points, lines, and polygons."
+  },
+  {
+    "id": "FC-CF-008",
+    "domain": "Conceptual Foundations",
+    "difficulty": "Medium",
+    "front": "What does Moran's I measure and how are its values interpreted?",
+    "back": "Global spatial autocorrelation. Significantly positive: similar values cluster (near expectation of +1 means strong clustering). Near the expected value of about -1/(n-1): random pattern. Significantly negative: dissimilar values are neighbours (dispersed or checkerboard)."
+  },
+  {
+    "id": "FC-CF-009",
+    "domain": "Conceptual Foundations",
+    "difficulty": "Easy",
+    "front": "Large scale versus small scale map: which shows more detail?",
+    "back": "Large scale (for example 1:1,000) has a larger representative fraction, covers a small area, and shows great detail. Small scale (for example 1:1,000,000) covers a large area with heavy generalisation. Note that geographers often use 'large-scale' to mean large extent, the opposite sense."
+  },
+  {
+    "id": "FC-CF-010",
+    "domain": "Conceptual Foundations",
+    "difficulty": "Easy",
+    "front": "Distinguish accuracy from precision.",
+    "back": "Accuracy is closeness of a measurement to the true value (bias). Precision is the repeatability or fineness of measurement (spread). Data can be precise but inaccurate (tight cluster far from truth) or accurate but imprecise."
+  },
+  {
+    "id": "FC-CF-011",
+    "domain": "Conceptual Foundations",
+    "difficulty": "Medium",
+    "front": "What is topology in GIS and which properties are topological?",
+    "back": "The study of spatial relationships that survive continuous deformation (stretching or bending without tearing). Adjacency, containment, and connectivity are topological; distance, area, and direction are metric and are not. Topology supports relationship queries and data integrity rules."
+  },
+  {
+    "id": "FC-CF-012",
+    "domain": "Conceptual Foundations",
+    "difficulty": "Medium",
+    "front": "How does GIScience differ from GIS?",
+    "back": "GIS is the technology: software, hardware, data, people, and methods for capturing, managing, analysing, and displaying geographic information. GIScience (Goodchild, 1992) is the discipline that studies the fundamental issues behind it: representation, uncertainty, spatial analysis, cognition, and the societal context of geographic information."
+  },
+  {
+    "id": "FC-DATA-001",
+    "domain": "Geospatial Data Fundamentals",
+    "difficulty": "Easy",
+    "front": "What are the three vector geometry primitives?",
+    "back": "Point (0-dimensional location), line/polyline (1-dimensional, has length), and polygon (2-dimensional, encloses area). They model discrete features with crisp boundaries."
+  },
+  {
+    "id": "FC-DATA-002",
+    "domain": "Geospatial Data Fundamentals",
+    "difficulty": "Easy",
+    "front": "What is the basic unit of the raster data model, and what does spatial resolution mean?",
+    "back": "The cell (pixel) is the basic unit; each holds one value. Spatial resolution is the ground size of a cell. Smaller cells = finer resolution and more detail, but larger file size (halving cell size roughly quadruples the cell count)."
+  },
+  {
+    "id": "FC-DATA-003",
+    "domain": "Geospatial Data Fundamentals",
+    "difficulty": "Medium",
+    "front": "Spaghetti vs. topological data: what is the difference?",
+    "back": "Spaghetti data stores geometry with no stored spatial relationships; shared boundaries are duplicated. Topological data explicitly stores adjacency, connectivity, and containment, sharing boundaries once and enabling integrity checks and network analysis."
+  },
+  {
+    "id": "FC-DATA-004",
+    "domain": "Geospatial Data Fundamentals",
+    "difficulty": "Medium",
+    "front": "Name the three core spatial relationships expressed by topology.",
+    "back": "Adjacency (features sharing boundaries), connectivity (lines joining at nodes), and containment (features lying inside others). These relationships are stored independently of coordinate values."
+  },
+  {
+    "id": "FC-DATA-005",
+    "domain": "Geospatial Data Fundamentals",
+    "difficulty": "Medium",
+    "front": "What is a TIN, and when is it used?",
+    "back": "A Triangulated Irregular Network represents a surface as a mesh of non-overlapping triangles built from irregularly spaced points (mass points and breaklines), usually via Delaunay triangulation. It captures terrain detail efficiently, with denser triangles where the surface is complex."
+  },
+  {
+    "id": "FC-DATA-006",
+    "domain": "Geospatial Data Fundamentals",
+    "difficulty": "Easy",
+    "front": "Which files make a shapefile valid (mandatory components)?",
+    "back": ".shp (geometry), .shx (shape index), and .dbf (attribute table) are mandatory. Optional companions include .prj (projection), .sbn/.sbx (spatial index), and .xml (metadata)."
+  },
+  {
+    "id": "FC-DATA-007",
+    "domain": "Geospatial Data Fundamentals",
+    "difficulty": "Medium",
+    "front": "Compare file, personal, and enterprise geodatabases.",
+    "back": "File geodatabase: folder of files, very large capacity, cross-platform, no server, mainly single-user. Personal geodatabase: stored in a desktop database engine, ~2 GB limit, legacy. Enterprise (multiuser) geodatabase: runs on a DBMS server, supports concurrent multiuser editing, versioning, and transactions."
+  },
+  {
+    "id": "FC-DATA-008",
+    "domain": "Geospatial Data Fundamentals",
+    "difficulty": "Easy",
+    "front": "Identify these open formats: GeoJSON, KML, GeoTIFF.",
+    "back": "GeoJSON: JSON-based vector format popular in web mapping. KML: XML-based vector format (OGC standard) for earth-browser display. GeoTIFF: raster image format with embedded georeferencing (CRS + transform)."
+  },
+  {
+    "id": "FC-DATA-009",
+    "domain": "Geospatial Data Fundamentals",
+    "difficulty": "Medium",
+    "front": "Compare FGDC CSDGM and ISO 19115.",
+    "back": "Both are metadata standards documenting geospatial datasets (identification, quality, spatial reference, distribution, etc.). FGDC CSDGM is the older U.S. national standard; ISO 19115 is the international standard now widely adopted in its place."
+  },
+  {
+    "id": "FC-DATA-010",
+    "domain": "Geospatial Data Fundamentals",
+    "difficulty": "Medium",
+    "front": "List the five common components of spatial data quality.",
+    "back": "Positional accuracy (coordinate correctness), attribute accuracy (correctness of attribute values), completeness (all features present, no omission/commission), logical consistency (adherence to structural/topological/domain rules), and lineage (documented source and processing history)."
+  },
+  {
+    "id": "FC-DATA-011",
+    "domain": "Geospatial Data Fundamentals",
+    "difficulty": "Easy",
+    "front": "Accuracy vs. precision in GIS?",
+    "back": "Accuracy is closeness to the true value. Precision is repeatability or level of detail (significant digits). Data can be precise but inaccurate (tightly clustered yet consistently offset from truth)."
+  },
+  {
+    "id": "FC-DATA-012",
+    "domain": "Geospatial Data Fundamentals",
+    "difficulty": "Medium",
+    "front": "What are spatial indexes (R-tree, quadtree, grid) for, and what is NoData?",
+    "back": "Spatial indexes speed up location queries: R-tree nests features in minimum bounding rectangles; quadtree recursively splits space into four quadrants; grid index buckets features into fixed tiles. NoData is a raster flag marking cells with no valid value (distinct from zero), normally ignored in analysis."
+  },
+  {
+    "id": "FC-CART-001",
+    "domain": "Cartography & Visualization",
+    "difficulty": "Easy",
+    "front": "Name the four main classes of map projection by the property they preserve.",
+    "back": "Conformal (preserves local angles/shape), Equal-area/equivalent (preserves area), Equidistant (preserves distance from a point or along lines), and Compromise (balances all distortions, preserving none exactly)."
+  },
+  {
+    "id": "FC-CART-002",
+    "domain": "Cartography & Visualization",
+    "difficulty": "Medium",
+    "front": "Why must choropleth and density maps use an equal-area projection?",
+    "back": "Because the visual message depends on comparing the areas of enumeration units. An equal-area projection keeps relative sizes correct so densities and shaded patterns are not distorted by projection-induced area exaggeration."
+  },
+  {
+    "id": "FC-CART-003",
+    "domain": "Cartography & Visualization",
+    "difficulty": "Easy",
+    "front": "Large scale vs. small scale: which shows more detail and a smaller area?",
+    "back": "Large scale (e.g., 1:24,000) shows a small area in great detail. Small scale (e.g., 1:1,000,000) shows a large area with less detail. Remember: larger denominator = smaller scale."
+  },
+  {
+    "id": "FC-CART-004",
+    "domain": "Cartography & Visualization",
+    "difficulty": "Medium",
+    "front": "Distinguish a geographic coordinate system (GCS) from a projected coordinate system (PCS).",
+    "back": "A GCS locates points on the ellipsoid using latitude/longitude in angular units and is tied to a datum. A PCS projects those positions onto a flat plane using linear units (meters/feet), e.g., UTM or State Plane."
+  },
+  {
+    "id": "FC-CART-005",
+    "domain": "Cartography & Visualization",
+    "difficulty": "Hard",
+    "front": "Are NAD83 and WGS84 the same datum?",
+    "back": "No. They were defined to be nearly coincident, but different realizations and plate motion mean modern coordinates can differ by a meter or more. Treat them as distinct for high-accuracy work; always check the realization/epoch."
+  },
+  {
+    "id": "FC-CART-006",
+    "domain": "Cartography & Visualization",
+    "difficulty": "Medium",
+    "front": "Compare the four common data classification methods: equal interval, quantile, natural breaks, standard deviation.",
+    "back": "Equal interval = equal-width classes (good for evenly spread data). Quantile = equal feature count per class. Natural breaks (Jenks) = minimizes within-class variance / maximizes between-class. Standard deviation = classes by distance from the mean."
+  },
+  {
+    "id": "FC-CART-007",
+    "domain": "Cartography & Visualization",
+    "difficulty": "Easy",
+    "front": "Match the three ColorBrewer scheme types to their data.",
+    "back": "Sequential = ordered low-to-high quantitative data (light-to-dark). Diverging = data with a critical midpoint/two extremes. Qualitative = nominal categories using distinct hues of similar lightness."
+  },
+  {
+    "id": "FC-CART-008",
+    "domain": "Cartography & Visualization",
+    "difficulty": "Medium",
+    "front": "List Bertin's visual variables and note which suit ordered vs. categorical data.",
+    "back": "Position, size, shape, value (lightness), hue/color, orientation, and texture/grain. Size is quantitative (readers can judge magnitude/proportion); value is ordered (good for ordinal/ranked data) but not truly quantitative; hue, shape, and orientation are best for nominal categories."
+  },
+  {
+    "id": "FC-CART-009",
+    "domain": "Cartography & Visualization",
+    "difficulty": "Hard",
+    "front": "Why should raw counts be normalized before making a choropleth map?",
+    "back": "Choropleths shade whole units, so without normalization larger units dominate simply because of their size/population. Convert counts to rates, ratios, or densities (divide by area or a relevant total) so units are comparable."
+  },
+  {
+    "id": "FC-CART-010",
+    "domain": "Cartography & Visualization",
+    "difficulty": "Medium",
+    "front": "Define choropleth, proportional symbol, dot density, isarithmic, and dasymetric maps.",
+    "back": "Choropleth: shaded enumeration units (use rates). Proportional/graduated symbol: symbol size = magnitude (good for totals). Dot density: dots, each = a quantity. Isarithmic/isopleth: isolines of equal value over a continuous surface. Dasymetric: refines choropleth using ancillary data."
+  },
+  {
+    "id": "FC-CART-011",
+    "domain": "Cartography & Visualization",
+    "difficulty": "Easy",
+    "front": "List the essential elements of a map layout.",
+    "back": "Title, legend, scale indicator (bar or RF), orientation/north arrow, neatline/border, and data source plus credits/date. Inset or locator maps and a graticule are common optional additions."
+  },
+  {
+    "id": "FC-CART-012",
+    "domain": "Cartography & Visualization",
+    "difficulty": "Medium",
+    "front": "What are figure-ground and visual hierarchy in cartographic design?",
+    "back": "Figure-ground makes the main subject stand out from the background using contrast, detail, and closed forms. Visual hierarchy ranks elements by importance through size, value, and contrast so the reader's eye is guided to the most important information first."
+  },
+  {
+    "id": "FC-RS-001",
+    "domain": "Data Acquisitions",
+    "difficulty": "Easy",
+    "front": "What is the difference between passive and active remote sensing?",
+    "back": "Passive sensors record naturally available energy, such as reflected sunlight or emitted thermal radiation. Active sensors (e.g., radar, LiDAR) generate and transmit their own energy pulses and measure the return, allowing day-or-night, weather-tolerant operation."
+  },
+  {
+    "id": "FC-RS-002",
+    "domain": "Data Acquisitions",
+    "difficulty": "Easy",
+    "front": "Name the four resolutions of a remote sensing system and what each describes.",
+    "back": "Spatial = ground area per pixel (GSD); Spectral = number and width of wavelength bands; Radiometric = number of brightness levels (bit depth); Temporal = revisit frequency over the same site."
+  },
+  {
+    "id": "FC-RS-003",
+    "domain": "Data Acquisitions",
+    "difficulty": "Easy",
+    "front": "Write the NDVI formula and state its value range.",
+    "back": "NDVI = (NIR - Red) / (NIR + Red). Values range from -1 to +1. High positive values (~0.6+) indicate dense healthy vegetation; values near 0 indicate bare soil/rock; negative values typically indicate water."
+  },
+  {
+    "id": "FC-RS-004",
+    "domain": "Data Acquisitions",
+    "difficulty": "Easy",
+    "front": "What is the difference between a true-color and a false-color (CIR) composite?",
+    "back": "True color maps the red, green, and blue bands to the red, green, and blue display channels (looks natural). False-color infrared (CIR) maps NIR to red, red to green, and green to blue, so vegetation appears bright red."
+  },
+  {
+    "id": "FC-RS-005",
+    "domain": "Data Acquisitions",
+    "difficulty": "Medium",
+    "front": "In an error matrix, how do producer's accuracy and user's accuracy differ?",
+    "back": "Producer's accuracy is computed from the reference (column) total and reflects omission error (how much true class area was correctly mapped). User's accuracy is computed from the classified (row) total and reflects commission error (reliability of the map label for the user)."
+  },
+  {
+    "id": "FC-RS-006",
+    "domain": "Data Acquisitions",
+    "difficulty": "Medium",
+    "front": "What is overall accuracy, and what does the kappa coefficient add?",
+    "back": "Overall accuracy = total correctly classified pixels (matrix diagonal) divided by total reference pixels. Kappa measures agreement adjusted for the agreement expected by chance: 0 = no better than random, 1 = perfect agreement."
+  },
+  {
+    "id": "FC-RS-007",
+    "domain": "Data Acquisitions",
+    "difficulty": "Medium",
+    "front": "Distinguish DEM/DTM from DSM.",
+    "back": "A DSM (Digital Surface Model) represents the top of all features including vegetation and buildings. A DTM (Digital Terrain Model) / bare-earth DEM represents the ground surface with above-ground objects removed. DSM minus DTM gives object heights (e.g., canopy height)."
+  },
+  {
+    "id": "FC-RS-008",
+    "domain": "Data Acquisitions",
+    "difficulty": "Medium",
+    "front": "Compare supervised, unsupervised, and object-based (OBIA) classification.",
+    "back": "Supervised: analyst provides training samples; algorithm learns class signatures. Unsupervised: clustering (e.g., K-means, ISODATA) groups pixels spectrally, then analyst labels clusters. OBIA: image is segmented into objects first, then objects are classified using spectral, spatial, textural, and contextual attributes."
+  },
+  {
+    "id": "FC-RS-009",
+    "domain": "Data Acquisitions",
+    "difficulty": "Medium",
+    "front": "What is orthorectification and why is it needed?",
+    "back": "Orthorectification removes geometric distortions from terrain relief displacement and sensor tilt using a DEM and sensor geometry, producing an orthoimage with uniform scale where every pixel is in its correct planimetric (map) position, enabling accurate measurement and overlay."
+  },
+  {
+    "id": "FC-RS-010",
+    "domain": "Data Acquisitions",
+    "difficulty": "Medium",
+    "front": "Why is SAR (radar) useful when optical imagery fails?",
+    "back": "SAR is an active microwave sensor. Its longer wavelengths penetrate clouds, smoke, and haze, and because it supplies its own energy it works day or night in all weather. It measures backscatter; smooth surfaces (calm water) appear dark, rough surfaces appear bright."
+  },
+  {
+    "id": "FC-RS-011",
+    "domain": "Data Acquisitions",
+    "difficulty": "Hard",
+    "front": "What two preprocessing steps are most critical before bi-temporal change detection, and why?",
+    "back": "Precise co-registration (so pixels in both images correspond to the same ground location) and radiometric/atmospheric normalization (so brightness values are comparable across dates). Without them, misregistration and atmospheric/illumination differences create false change unrelated to real surface change."
+  },
+  {
+    "id": "FC-RS-012",
+    "domain": "Data Acquisitions",
+    "difficulty": "Hard",
+    "front": "Why do LiDAR first and last returns matter, and how are DTMs derived under forest?",
+    "back": "A single pulse can yield multiple returns. The first return is usually the canopy top or highest feature; later/last returns may reach the ground. By classifying and filtering ground returns and interpolating them, analysts build a bare-earth DTM even beneath vegetation, something passive optical sensors cannot do."
+  },
+  {
+    "id": "FC-DM-001",
+    "domain": "Data Manipulation",
+    "difficulty": "Easy",
+    "front": "Clip vs Intersect: what is the difference in output attributes?",
+    "back": "Clip cuts the input to the clip feature's extent and keeps only the input's attributes. Intersect keeps only overlapping geometry but carries attributes from both inputs."
+  },
+  {
+    "id": "FC-DM-002",
+    "domain": "Data Manipulation",
+    "difficulty": "Easy",
+    "front": "Merge vs Append: which one modifies an existing dataset?",
+    "back": "Append loads records into an existing target dataset, preserving its schema, domains, and relationships. Merge creates a new output dataset from several inputs."
+  },
+  {
+    "id": "FC-DM-003",
+    "domain": "Data Manipulation",
+    "difficulty": "Medium",
+    "front": "What does the Erase (difference) operation do?",
+    "back": "It removes from the input layer every part that overlaps the erase layer, keeping only the input geometry outside the erase features, with the input's attributes."
+  },
+  {
+    "id": "FC-DM-004",
+    "domain": "Data Manipulation",
+    "difficulty": "Medium",
+    "front": "Define projection vs Project: when do you use each?",
+    "back": "Define: the coordinate values are correct but the metadata is missing or wrong; only the label changes. Project: mathematically converts coordinate values into a new coordinate system (with a datum transformation if datums differ)."
+  },
+  {
+    "id": "FC-DM-005",
+    "domain": "Data Manipulation",
+    "difficulty": "Easy",
+    "front": "Nearest neighbor, bilinear, cubic: which resampling for which raster?",
+    "back": "Nearest neighbor for categorical or thematic rasters (keeps original codes). Bilinear (4 cells) and cubic convolution (16 cells, smoother but may overshoot) for continuous surfaces such as elevation or imagery."
+  },
+  {
+    "id": "FC-DM-006",
+    "domain": "Data Manipulation",
+    "difficulty": "Medium",
+    "front": "Define dangle, undershoot, overshoot, and sliver.",
+    "back": "Dangle: line endpoint connected to nothing. Undershoot: line stops short of its junction. Overshoot: line extends past its junction. Sliver: thin spurious polygon from overlaying boundaries that do not coincide."
+  },
+  {
+    "id": "FC-DM-007",
+    "domain": "Data Manipulation",
+    "difficulty": "Medium",
+    "front": "Table join vs relate vs spatial join.",
+    "back": "Join: appends fields via a common key (one-to-one or many-to-one). Relate: keeps tables separate for one-to-many querying. Spatial join: links records by spatial relationship (within, intersects, nearest) instead of a key."
+  },
+  {
+    "id": "FC-DM-008",
+    "domain": "Data Manipulation",
+    "difficulty": "Medium",
+    "front": "Conflation vs edge-matching.",
+    "back": "Conflation: matching the same features in two datasets and combining the best geometry and attributes into one. Edge-matching: aligning features across the boundary between separately captured sheets or jurisdictions so they connect."
+  },
+  {
+    "id": "FC-DM-009",
+    "domain": "Data Manipulation",
+    "difficulty": "Easy",
+    "front": "Name three practical limitations of the shapefile format.",
+    "back": "10-character field names, 2 GB per component file, no true null values (plus no topology, no domains, and multiple files to keep together). GeoPackage avoids these."
+  },
+  {
+    "id": "FC-DM-010",
+    "domain": "Data Manipulation",
+    "difficulty": "Hard",
+    "front": "What does Douglas-Peucker do, and why can simplifying polygons independently cause gaps?",
+    "back": "Douglas-Peucker removes vertices that deviate less than a tolerance from the trend line, preserving shape with fewer points. Simplifying adjacent polygons separately keeps different vertices on each side of a shared edge, producing gaps and overlaps; use a topology-preserving simplifier."
+  },
+  {
+    "id": "FC-DM-011",
+    "domain": "Data Manipulation",
+    "difficulty": "Medium",
+    "front": "Coded value domain vs range domain.",
+    "back": "Coded value domain: a list of allowed codes with descriptions (RES = Residential). Range domain: allowed numeric minimum and maximum. Both validate attribute entry and keep data consistent."
+  },
+  {
+    "id": "FC-DM-012",
+    "domain": "Data Manipulation",
+    "difficulty": "Hard",
+    "front": "In versioned editing, what are reconcile and post, and how are conflicts handled?",
+    "back": "Reconcile pulls the parent version's changes into the child and flags conflicts where both edited the same feature. Post writes the reconciled edits back to the parent. Conflicts are reviewed and resolved by a person under an agreed policy before posting; never auto-overwrite."
+  },
+  {
+    "id": "FC-SAM-001",
+    "domain": "Analytical Methods",
+    "difficulty": "Easy",
+    "front": "What is a buffer in GIS?",
+    "back": "A buffer is a polygon (or zone) enclosing all areas within a specified distance of input point, line, or polygon features, used for proximity analysis."
+  },
+  {
+    "id": "FC-SAM-002",
+    "domain": "Analytical Methods",
+    "difficulty": "Easy",
+    "front": "State Tobler's First Law of Geography.",
+    "back": "Everything is related to everything else, but near things are more related than distant things. It is the conceptual basis for spatial autocorrelation and interpolation."
+  },
+  {
+    "id": "FC-SAM-003",
+    "domain": "Analytical Methods",
+    "difficulty": "Medium",
+    "front": "How do Clip, Intersect, Union, and Erase differ?",
+    "back": "Clip cuts the input to a boundary keeping only input attributes; Intersect keeps only overlapping geometry with both layers' attributes; Union keeps the full extent of both layers and all attributes; Erase removes the overlapping area from the input."
+  },
+  {
+    "id": "FC-SAM-004",
+    "domain": "Analytical Methods",
+    "difficulty": "Medium",
+    "front": "What does a network service area (isochrone) analysis produce?",
+    "back": "It delineates the portion of a network reachable from a facility within a specified travel-cost threshold (e.g., distance or time), such as a 5-minute drive-time polygon."
+  },
+  {
+    "id": "FC-SAM-005",
+    "domain": "Analytical Methods",
+    "difficulty": "Hard",
+    "front": "How does kriging differ from IDW interpolation?",
+    "back": "IDW is deterministic and weights samples purely by distance. Kriging is geostatistical, modeling spatial autocorrelation with a variogram to derive optimal weights and to produce a prediction-uncertainty surface."
+  },
+  {
+    "id": "FC-SAM-006",
+    "domain": "Analytical Methods",
+    "difficulty": "Medium",
+    "front": "What do high positive vs. negative values of global Moran's I indicate?",
+    "back": "Values near +1 indicate positive spatial autocorrelation (similar values cluster), near -1 indicate negative autocorrelation/dispersion (dissimilar neighbors), and values near the expected value (~0) indicate spatial randomness."
+  },
+  {
+    "id": "FC-SAM-007",
+    "domain": "Analytical Methods",
+    "difficulty": "Medium",
+    "front": "What are the basic steps to build a weighted overlay suitability model?",
+    "back": "Reclassify each criterion raster onto a common suitability scale, assign weights reflecting relative importance (typically summing to 1.0 or 100%), then multiply and sum to produce a combined suitability surface."
+  },
+  {
+    "id": "FC-SAM-008",
+    "domain": "Analytical Methods",
+    "difficulty": "Easy",
+    "front": "What is a viewshed analysis?",
+    "back": "Using a DEM and one or more observer locations, a viewshed identifies which cells of the surface are visible (have unobstructed line of sight) from the observers."
+  },
+  {
+    "id": "FC-SAM-009",
+    "domain": "Analytical Methods",
+    "difficulty": "Hard",
+    "front": "What is a least-cost path and how does it differ from a straight-line path?",
+    "back": "A least-cost path minimizes accumulated cost over a friction/cost surface, derived from a cost-distance and a back-link raster. It may be longer in ground distance than a straight (Euclidean) line but cheaper to traverse."
+  },
+  {
+    "id": "FC-SAM-010",
+    "domain": "Analytical Methods",
+    "difficulty": "Medium",
+    "front": "What does Getis-Ord Gi* hot spot analysis detect?",
+    "back": "It identifies statistically significant spatial clusters of high values (hot spots, high positive z-score) and low values (cold spots, significant negative z-score) based on each feature and its neighbors."
+  },
+  {
+    "id": "FC-SAM-011",
+    "domain": "Analytical Methods",
+    "difficulty": "Hard",
+    "front": "What is the Modifiable Areal Unit Problem (MAUP)?",
+    "back": "MAUP is the sensitivity of statistical results to how data are aggregated into areal units. It has a scale effect (level of aggregation) and a zoning effect (how boundaries are drawn)."
+  },
+  {
+    "id": "FC-SAM-012",
+    "domain": "Analytical Methods",
+    "difficulty": "Easy",
+    "front": "What does zonal statistics compute?",
+    "back": "Zonal statistics summarizes the values of a value raster (e.g., mean, sum, max) within each zone defined by a separate zone dataset, such as average elevation per watershed."
+  },
+  {
+    "id": "FC-DBM-001",
+    "domain": "Database Design & Management",
+    "difficulty": "Easy",
+    "front": "Primary key vs. foreign key",
+    "back": "A primary key uniquely identifies each record in a table (no nulls, no duplicates) and enforces entity integrity. A foreign key is a field in one table that references the primary key of another table, establishing a relationship and supporting referential integrity."
+  },
+  {
+    "id": "FC-DBM-002",
+    "domain": "Database Design & Management",
+    "difficulty": "Medium",
+    "front": "The three classic normal forms (1NF, 2NF, 3NF)",
+    "back": "1NF: each cell holds a single atomic value, no repeating groups. 2NF: in 1NF plus no partial dependencies (every non-key attribute depends on the whole composite key). 3NF: in 2NF plus no transitive dependencies (non-key attributes depend only on the key, not on other non-key attributes)."
+  },
+  {
+    "id": "FC-DBM-003",
+    "domain": "Database Design & Management",
+    "difficulty": "Medium",
+    "front": "Denormalization: what and why",
+    "back": "Denormalization intentionally reintroduces redundancy (e.g., pre-joining or duplicating attributes) to improve read/query performance by reducing the number of joins needed. The tradeoff is increased storage and more complex updates to keep duplicated data consistent."
+  },
+  {
+    "id": "FC-DBM-004",
+    "domain": "Database Design & Management",
+    "difficulty": "Medium",
+    "front": "Cardinality types in ER modeling",
+    "back": "One-to-one (1:1): each instance relates to at most one of the other. One-to-many (1:M): one instance relates to many. Many-to-many (M:N): instances on both sides relate to many; resolved in relational design with an associative/junction table holding foreign keys to both entities."
+  },
+  {
+    "id": "FC-DBM-005",
+    "domain": "Database Design & Management",
+    "difficulty": "Medium",
+    "front": "Join vs. relate in GIS",
+    "back": "A join appends the fields of one table onto another and works for one-to-one or many-to-one matches. A relate defines an association between tables without merging them, which is appropriate for one-to-many relationships where a record links to multiple related records."
+  },
+  {
+    "id": "FC-DBM-006",
+    "domain": "Database Design & Management",
+    "difficulty": "Hard",
+    "front": "INNER JOIN vs. LEFT OUTER JOIN",
+    "back": "INNER JOIN returns only rows with matching keys in both tables. LEFT OUTER JOIN returns all rows from the left table plus matching rows from the right; where no match exists, the right-side columns are null. Use LEFT JOIN to preserve unmatched records from the primary table."
+  },
+  {
+    "id": "FC-DBM-007",
+    "domain": "Database Design & Management",
+    "difficulty": "Medium",
+    "front": "WHERE vs. HAVING in SQL",
+    "back": "WHERE filters individual rows before grouping and cannot reference aggregate functions. HAVING filters the grouped results after aggregation and can use aggregates such as COUNT(*) > 5. Order of evaluation: WHERE -> GROUP BY -> HAVING."
+  },
+  {
+    "id": "FC-DBM-008",
+    "domain": "Database Design & Management",
+    "difficulty": "Medium",
+    "front": "Common PostGIS spatial functions",
+    "back": "ST_Intersects: TRUE if two geometries share any space. ST_Buffer: returns a polygon covering all area within a given distance of a geometry. ST_Within / ST_Contains: test containment. ST_Centroid: geometric center point. ST_Length / ST_Area: measure linear or areal extent."
+  },
+  {
+    "id": "FC-DBM-009",
+    "domain": "Database Design & Management",
+    "difficulty": "Medium",
+    "front": "Coded-value domain vs. range domain",
+    "back": "A coded-value domain restricts a field to a fixed list of valid values (e.g., Paved, Gravel, Dirt), often storing a code with a description. A range domain restricts a numeric field to a continuous minimum-to-maximum interval (e.g., pipe diameter 4 to 48 inches). Both enforce attribute integrity in a geodatabase."
+  },
+  {
+    "id": "FC-DBM-010",
+    "domain": "Database Design & Management",
+    "difficulty": "Hard",
+    "front": "Geodatabase feature class, feature dataset, and subtype",
+    "back": "A feature class is a table whose records have geometry. A feature dataset groups feature classes sharing one spatial reference (required for topology/networks). A subtype partitions features within a single feature class into categories that can each have their own default values, domains, and rules."
+  },
+  {
+    "id": "FC-DBM-011",
+    "domain": "Database Design & Management",
+    "difficulty": "Hard",
+    "front": "ACID properties",
+    "back": "Atomicity: a transaction is all-or-nothing. Consistency: a transaction moves the database from one valid state to another, honoring constraints. Isolation: concurrent transactions do not interfere with one another. Durability: once committed, changes persist even after a system failure."
+  },
+  {
+    "id": "FC-DBM-012",
+    "domain": "Database Design & Management",
+    "difficulty": "Medium",
+    "front": "Referential integrity, indexes, and versioning",
+    "back": "Referential integrity ensures a foreign key matches an existing primary key (or is null), preventing orphaned records. An index speeds up lookups on a column at the cost of storage and slower writes; spatial indexes (e.g., GiST) accelerate spatial queries. Versioning lets multiple editors work concurrently and reconcile/post changes without locking the data."
+  },
+  {
+    "id": "FC-AD-001",
+    "domain": "Application Development",
+    "difficulty": "Easy",
+    "front": "What does a WMS GetMap request return?",
+    "back": "A rendered map image (e.g., PNG, JPEG) for a requested set of layers, bounding box, CRS and pixel size. It is a picture, not the data."
+  },
+  {
+    "id": "FC-AD-002",
+    "domain": "Application Development",
+    "difficulty": "Easy",
+    "front": "What does a WFS return, and what does WFS-T add?",
+    "back": "WFS returns the actual vector features (geometry plus attributes, commonly GML or GeoJSON). WFS-T adds transactions: insert, update and delete."
+  },
+  {
+    "id": "FC-AD-003",
+    "domain": "Application Development",
+    "difficulty": "Medium",
+    "front": "What does a WCS return?",
+    "back": "Raw raster or coverage data in its native values (e.g., a DEM as GeoTIFF) so it can be analysed, as opposed to the rendered image a WMS gives."
+  },
+  {
+    "id": "FC-AD-004",
+    "domain": "Application Development",
+    "difficulty": "Medium",
+    "front": "How does WMTS differ from WMS?",
+    "back": "WMTS serves pre-rendered cached tiles on a fixed tile matrix and scale set for speed; WMS renders images on demand for arbitrary extents and scales."
+  },
+  {
+    "id": "FC-AD-005",
+    "domain": "Application Development",
+    "difficulty": "Medium",
+    "front": "What is CSW used for?",
+    "back": "Catalogue Service for the Web: publishing and searching metadata records so users can discover datasets and services by keyword, extent or other criteria."
+  },
+  {
+    "id": "FC-AD-006",
+    "domain": "Application Development",
+    "difficulty": "Hard",
+    "front": "In GeoJSON (RFC 7946), what CRS and coordinate order are required?",
+    "back": "WGS 84, with coordinates as [longitude, latitude] (x, y), optionally followed by elevation."
+  },
+  {
+    "id": "FC-AD-007",
+    "domain": "Application Development",
+    "difficulty": "Medium",
+    "front": "How many tiles cover the world at zoom level z in a standard XYZ tile scheme?",
+    "back": "4^z tiles (2^z columns by 2^z rows). Each zoom level quadruples the tile count, e.g., zoom 4 = 256 tiles."
+  },
+  {
+    "id": "FC-AD-008",
+    "domain": "Application Development",
+    "difficulty": "Medium",
+    "front": "What is Web Mercator and why is it used for web basemaps?",
+    "back": "EPSG:3857, a conformal spherical Mercator projection. Its square world extent nests into tile pyramids and preserves local shape, at the cost of severe area distortion toward the poles."
+  },
+  {
+    "id": "FC-AD-009",
+    "domain": "Application Development",
+    "difficulty": "Medium",
+    "front": "What is the main advantage of vector tiles over raster tiles?",
+    "back": "The client renders them, so one tile set can be restyled, rotated, labelled and queried dynamically without regenerating the cache."
+  },
+  {
+    "id": "FC-AD-010",
+    "domain": "Application Development",
+    "difficulty": "Easy",
+    "front": "Agile vs waterfall in one line each.",
+    "back": "Agile: short iterations delivering working increments with continuous feedback and evolving requirements. Waterfall: sequential phases with requirements fixed up front before design and build."
+  },
+  {
+    "id": "FC-AD-011",
+    "domain": "Application Development",
+    "difficulty": "Easy",
+    "front": "Authentication vs authorization.",
+    "back": "Authentication verifies who the user is (login). Authorization decides what that verified user may access or do (roles, permissions)."
+  },
+  {
+    "id": "FC-AD-012",
+    "domain": "Application Development",
+    "difficulty": "Hard",
+    "front": "Copyleft vs permissive open-source licences.",
+    "back": "Copyleft (e.g., GPL) requires distributed derivative works to be released under the same licence. Permissive (MIT, BSD, Apache 2.0) allows proprietary reuse with attribution."
+  },
+  {
+    "id": "FC-SDM-001",
+    "domain": "Systems Design & Management",
+    "difficulty": "Easy",
+    "front": "What is a GIS needs assessment and why does it come first?",
+    "back": "A structured study of an organization's business functions, users, workflows, data and required products that defines requirements. It comes first because software, hardware and data decisions must be driven by documented needs, not the reverse."
+  },
+  {
+    "id": "FC-SDM-002",
+    "domain": "Systems Design & Management",
+    "difficulty": "Easy",
+    "front": "Define total cost of ownership (TCO) for a GIS.",
+    "back": "All costs over the system's life: initial hardware, software and data acquisition plus ongoing maintenance, support, staffing, training, hosting and upgrades. Recurring costs usually exceed the initial purchase."
+  },
+  {
+    "id": "FC-SDM-003",
+    "domain": "Systems Design & Management",
+    "difficulty": "Medium",
+    "front": "RPO vs RTO: what does each one define?",
+    "back": "RPO (recovery point objective) is the maximum tolerable data loss expressed as time since the last recoverable backup; it drives backup frequency. RTO (recovery time objective) is the maximum tolerable downtime before service is restored; it drives DR architecture (hot, warm, cold site)."
+  },
+  {
+    "id": "FC-SDM-004",
+    "domain": "Systems Design & Management",
+    "difficulty": "Easy",
+    "front": "What is a service level agreement (SLA) and what does it typically specify?",
+    "back": "A formal commitment between provider and customer stating measurable service targets such as availability (e.g. 99.9 percent), response time, support turnaround and maintenance windows, plus remedies if targets are missed."
+  },
+  {
+    "id": "FC-SDM-005",
+    "domain": "Systems Design & Management",
+    "difficulty": "Medium",
+    "front": "State the 3-2-1 backup rule.",
+    "back": "Keep at least three copies of data, on two different media or storage types, with one copy off-site. Backups should also be tested by restoring them periodically."
+  },
+  {
+    "id": "FC-SDM-006",
+    "domain": "Systems Design & Management",
+    "difficulty": "Easy",
+    "front": "What is the project management triple constraint?",
+    "back": "Scope, schedule and cost. They are interdependent: changing one forces a change in at least one of the others, with quality affected as a result."
+  },
+  {
+    "id": "FC-SDM-007",
+    "domain": "Systems Design & Management",
+    "difficulty": "Medium",
+    "front": "Compare centralized, decentralized and hybrid enterprise GIS organizational models.",
+    "back": "Centralized: one GIS unit owns core data, standards and infrastructure and serves departments (consistency, economies of scale, but can be slow to respond). Decentralized: each department runs its own GIS (responsive, but duplication and inconsistent standards). Hybrid or federated: central standards and shared infrastructure with departmental ownership of their own data."
+  },
+  {
+    "id": "FC-SDM-008",
+    "domain": "Systems Design & Management",
+    "difficulty": "Medium",
+    "front": "Distinguish data owner, data steward and data custodian.",
+    "back": "Owner: the business unit or executive accountable for the dataset and its policies. Steward: the business-side person responsible for the dataset's quality, definitions and appropriate use. Custodian: the technical role (often IT or DBA) that stores, secures and backs up the data."
+  },
+  {
+    "id": "FC-SDM-009",
+    "domain": "Systems Design & Management",
+    "difficulty": "Medium",
+    "front": "What is the principle of least privilege and how does role-based access control support it?",
+    "back": "Least privilege: grant each user or service only the permissions needed for its tasks. RBAC implements it by attaching permissions to roles (viewer, editor, administrator) and assigning users to roles, which scales and is easy to audit."
+  },
+  {
+    "id": "FC-SDM-010",
+    "domain": "Systems Design & Management",
+    "difficulty": "Easy",
+    "front": "What is the purpose of a pilot project in a GIS implementation?",
+    "back": "To test the design, data model, workflows and technology at limited scale and risk, surface problems while change is cheap, and build user buy-in before a phased enterprise rollout."
+  },
+  {
+    "id": "FC-SDM-011",
+    "domain": "Systems Design & Management",
+    "difficulty": "Hard",
+    "front": "Give the formulas for simple ROI and simple payback period.",
+    "back": "Simple ROI = (total benefits - total costs) / total costs, expressed as a percentage. Simple payback period = initial investment / annual net benefit (years). Both ignore discounting; net present value accounts for the time value of money."
+  },
+  {
+    "id": "FC-SDM-012",
+    "domain": "Systems Design & Management",
+    "difficulty": "Medium",
+    "front": "RFI vs RFP vs RFQ: when is each used in procurement?",
+    "back": "RFI (request for information): early market research before requirements are fixed. RFP (request for proposals): requirements stated, vendors propose solutions and prices, evaluated on criteria. RFQ (request for quotation): item fully specified, vendors quote price."
+  },
+  {
+    "id": "FC-PROF-001",
+    "domain": "Professional Practice",
+    "difficulty": "Easy",
+    "front": "What is a 'needs assessment' in GIS implementation?",
+    "back": "A structured process to identify user requirements, existing workflows, and data gaps so that the GIS supports real business objectives. It precedes design decisions and reduces the risk of building an unused system."
+  },
+  {
+    "id": "FC-PROF-002",
+    "domain": "Professional Practice",
+    "difficulty": "Easy",
+    "front": "Define 'scope creep' and how it is controlled.",
+    "back": "Scope creep is the uncontrolled expansion of project requirements beyond the agreed scope without matching adjustments to schedule or budget. It is managed through a documented change-control process tied to the scope statement."
+  },
+  {
+    "id": "FC-PROF-003",
+    "domain": "Professional Practice",
+    "difficulty": "Medium",
+    "front": "What is a conflict of interest, and what is the professional's duty when one arises?",
+    "back": "A situation where a personal, financial, or relational interest could improperly influence professional judgment. The duty is to disclose it promptly and recuse oneself or apply safeguards to preserve impartiality and trust."
+  },
+  {
+    "id": "FC-PROF-004",
+    "domain": "Professional Practice",
+    "difficulty": "Medium",
+    "front": "Why is 'honest representation of data' an ethical obligation?",
+    "back": "Decision-makers and the public rely on GIS outputs. Selectively omitting data, overstating accuracy, or misleading symbology distorts decisions. Professionals must represent data truthfully and communicate its limitations and uncertainty."
+  },
+  {
+    "id": "FC-PROF-005",
+    "domain": "Professional Practice",
+    "difficulty": "Easy",
+    "front": "What is metadata, and why is documenting it a professional responsibility?",
+    "back": "Metadata is structured 'data about data' describing source, lineage, accuracy, projection, attributes, contacts, and use constraints. Documenting it lets others judge fitness for use, reproduce work, and respect licensing."
+  },
+  {
+    "id": "FC-PROF-006",
+    "domain": "Professional Practice",
+    "difficulty": "Medium",
+    "front": "Distinguish WMS, WMTS, and WFS (OGC web services).",
+    "back": "WMS returns dynamically rendered map images; WMTS returns pre-cached map tiles for fast display; WFS serves actual vector features (geometry + attributes) that clients can query and, via WFS-T, edit."
+  },
+  {
+    "id": "FC-PROF-007",
+    "domain": "Professional Practice",
+    "difficulty": "Easy",
+    "front": "What is the difference between QA and QC?",
+    "back": "Quality Assurance (QA) establishes processes and standards to prevent errors before they occur; Quality Control (QC) inspects outputs to detect and correct defects. Together they ensure data meets accuracy and completeness requirements."
+  },
+  {
+    "id": "FC-PROF-008",
+    "domain": "Professional Practice",
+    "difficulty": "Medium",
+    "front": "What does ROI / cost-benefit analysis evaluate for a GIS investment?",
+    "back": "It weighs monetized benefits (efficiency gains, avoided costs, new revenue) against total cost of ownership over a time horizon. Simple payback = initial cost / net annual benefit; fuller analysis (NPV) accounts for the time value of money."
+  },
+  {
+    "id": "FC-PROF-009",
+    "domain": "Professional Practice",
+    "difficulty": "Medium",
+    "front": "How should a GIS professional handle confidential or personally identifiable spatial data before public release?",
+    "back": "Assess re-identification risk, then aggregate to areal units, suppress small counts, or apply geomasking/anonymization so individuals cannot be identified. Balance the public benefit of sharing against the duty to protect privacy."
+  },
+  {
+    "id": "FC-PROF-010",
+    "domain": "Professional Practice",
+    "difficulty": "Medium",
+    "front": "What is PPGIS (Public Participation GIS)?",
+    "back": "An approach that engages the public and community stakeholders, capturing their local knowledge and preferences to inform spatial planning and broaden participation in decisions that affect them."
+  },
+  {
+    "id": "FC-PROF-011",
+    "domain": "Professional Practice",
+    "difficulty": "Medium",
+    "front": "What obligations come with using data under an attribution / share-alike license?",
+    "back": "You must credit the original source as specified and, under share-alike terms, license any derivative works under the same terms. Ignoring these breaches both the license and the creator's intellectual property rights."
+  },
+  {
+    "id": "FC-PROF-012",
+    "domain": "Professional Practice",
+    "difficulty": "Hard",
+    "front": "How can a GIS professional reduce liability when outputs may inform high-stakes decisions?",
+    "back": "Document data sources, accuracy, assumptions, and limitations; clearly communicate uncertainty; avoid overstating certainty; and retain methodology records. Transparency supports defensible decisions and limits legal exposure."
+  }
+]
